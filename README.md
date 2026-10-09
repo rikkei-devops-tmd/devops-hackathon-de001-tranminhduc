@@ -16,19 +16,18 @@ DEVOPS HACKATHON - DE 001: QUAN LY PHONG LAB
 
 3. CAU TRUC DU AN
 devops-hackathon-de001-tranminhduc/
-├── src/
-│   └── index.html
-├── nginx/
-│   └── tranminhduc-k24cntt1.conf
-├── screenshots/
-│   ├── 01-user.png
-│   ├── 02-nginx.png
-│   ├── 03-ufw.png
-│   ├── 04-website.png
-│   ├── 05-git-log.png
-│   └── 06-update.png
-├── .gitignore
-└── README.md
+src/ index.html
+nginx/
+   tranminhduc-k24cntt1.conf
+screenshots/
+        01-user.png 
+        02-nginx.png
+        03-ufw.png
+        04-website.png
+        05-git-log.png
+        06-update.png 
+.gitignore
+README.md
 
 4. CAU HINH NGINX
 - <PORT>: 8088 (Cong ca nhan phuc vu website qua Nginx IPv4 va IPv6)
