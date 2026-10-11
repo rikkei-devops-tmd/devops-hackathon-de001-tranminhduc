@@ -2,9 +2,10 @@ DEVOPS HACKATHON - DE 001: QUAN LY PHONG LAB
 
 1. THONG TIN SINH VIEN
 - Ho va ten: Tran Minh Duc
-- Ma sinh vien: K24CNTT1
+- Ma sinh vien: PTIT-HCM-085
 - Lop: K24-CNTT1
 - Tai khoan Linux: tranminhduc-k24cntt1
+- Tai khoan quan tri VPS ban dau: duc_devops
 - GitHub: rikkei-devops-tmd
 - Cong Nginx: 8088
 
@@ -56,17 +57,18 @@ To                         Action      From
 8088/tcp (v6)              ALLOW IN    Anywhere (v6)
 
 6. CAC BUOC TRIEN KHAI
-1. Khoi tao nguoi dung: sudo adduser tranminhduc-k24cntt1 va cap quyen: sudo usermod -aG sudo tranminhduc-k24cntt1.
-2. Cai dat goi phan mem: sudo apt update && sudo apt install -y nginx git ufw curl.
-3. Cau hinh Git danh tinh: git config --global user.name "Tran Minh Duc" va git config --global user.email "tranminhduc@example.com".
-4. Clone ma nguon tu GitHub: sudo git clone https://github.com/rikkei-devops-tmd/devops-hackathon-de001-tranminhduc.git /var/www/devops-hackathon-de001-tranminhduc.
-5. Phan quyen chuan: sudo chown -R tranminhduc-k24cntt1:tranminhduc-k24cntt1 /var/www/devops-hackathon-de001-tranminhduc, cap quyen thu muc 755 va tep tin 644.
-6. Kich hoat Server Block Nginx:
+1. Dang nhap VPS bang tai khoan quan tri: ssh duc_devops@103.20.102.126.
+2. Khoi tao nguoi dung: sudo adduser tranminhduc-k24cntt1 va cap quyen: sudo usermod -aG sudo tranminhduc-k24cntt1.
+3. Cai dat goi phan mem: sudo apt update && sudo apt install -y nginx git ufw curl.
+4. Cau hinh Git danh tinh: git config --global user.name "Tran Minh Duc" va git config --global user.email "tranminhduc@example.com".
+5. Clone ma nguon tu GitHub: sudo git clone https://github.com/rikkei-devops-tmd/devops-hackathon-de001-tranminhduc.git /var/www/devops-hackathon-de001-tranminhduc.
+6. Phan quyen chuan: sudo chown -R tranminhduc-k24cntt1:tranminhduc-k24cntt1 /var/www/devops-hackathon-de001-tranminhduc, cap quyen thu muc 755 va tep tin 644.
+7. Kich hoat Server Block Nginx:
 - sudo cp /var/www/devops-hackathon-de001-tranminhduc/nginx/tranminhduc-k24cntt1.conf /etc/nginx/sites-available/
 - sudo ln -s /etc/nginx/sites-available/tranminhduc-k24cntt1.conf /etc/nginx/sites-enabled/
 - sudo rm -f /etc/nginx/sites-enabled/default
-7. Kiem tra va tai lai Nginx: sudo nginx -t && sudo systemctl reload nginx.
-8. Thiet lap tuong lua UFW: sudo ufw allow 22/tcp && sudo ufw allow 8088/tcp && sudo ufw --force enable.
+8. Kiem tra va tai lai Nginx: sudo nginx -t && sudo systemctl reload nginx.
+9. Thiet lap tuong lua UFW: sudo ufw allow 22/tcp && sudo ufw allow 8088/tcp && sudo ufw --force enable.
 
 7. KIEM TRA VA MINH CHUNG
 - Minh chung 1: 01-user.png (Ket qua lenh id va whoami cua tai khoan tranminhduc-k24cntt1)
